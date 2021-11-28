@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease;
+    background-color: #FEC260;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+#copyBtn {
+    border-radius: 5px;
+    border: 1px solid #191A19;
+    color: #000;
+    margin: 10px 0 0 0;
+    width: 25%;
+    height: 15%;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    transition: background-color .5s ease;
+}
+
+.card {
+    width: 85%;
+    height: 70%;
+    background-color: #191A19;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.rgbArea, .hexArea {
+    width: 20%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rgbArea label, .hexArea label {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.rgbArea input, .hexArea input {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #191A19;
+    border-radius: 5px;
+    font-size: 3rem;
+    background-color: #ebebeb;
+}
+
+.rgbArea input::placeholder, .hexArea input::placeholder {
+    color: #000;
+}
+
+@media only screen and (max-width: 480px) {
+    .card {
+        width: 85%;
+        height: 50%;
+    }
+    .rgbArea label, .hexArea label {
+        font-size: 2rem;
+    }
+    .rgbArea input, .hexArea input {
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    #copyBtn {
+        font-size: 1rem;
+        max-width: 40%;
+        max-height: 30%;
+        padding: 15px;
+    }
+}
